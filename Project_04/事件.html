@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="static/plugins/bootstrap-3.4.1/css/bootstrap.css">
+<style>
+
+</style>
+</head>
+<body>
+
+  <input type="text" placeholder="请输入:" id="txtTag">
+  <input type="button" value="提交" onclick="add()">
+
+  <ul id="list" >
+
+  </ul>
+
+
+
+  <script type="text/javascript">
+    function add( ) {
+         var textTag = document.getElementById('txtTag');
+         var txt = textTag.value;
+         var ls = document.getElementById('list');
+         if (txt.length > 0){
+            var li = document.createElement('li');
+            li.innerText = txt;
+            ls.appendChild(li);
+         }else{
+            alert('输入不能为空!');
+         }
+    }
+
+  </script>
+
+  <script src="static/js/jquery-3.7.1.min.js"></script>
+  <script src="static/plugins/bootstrap-3.4.1/js/bootstrap.js"></script>
+</body>
+</html>
